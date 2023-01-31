@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Powerliftingng</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+
+    <!-- Bootstrap core CSS -->
+<link href="./carousel/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="./carousel/carousel.css" rel="stylesheet">
+  </head>
+  <body>
+
+<main role="main">
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/><img src="ray squatting.jpg"></svg>
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1>The Squat</h1>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/><img src ="bench example.jpg"></svg>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>The Bench</h1>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/><img src="deadlift example.jpg"></svg>
+        <div class="container">
+          <div class="carousel-caption text-right">
+            <h1>The Deadlift</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <h2>Squat</h2>
+        <p>Movement performed by having the weight on your back, and bending at the hips and knees simultaneously until thighs are parallel with the ground. Then, pushing up using your legs until you're fully stood up.</p>
+        <p><button class="btn btn-secondary" href="#" role="button" onclick="scrollSquat()">View details &raquo;</button></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <h2>Bench</h2>
+        <p>Movement performed by having the weight over your chest, bending at your elbows until its touching your chest and then pushing it back up to the original position.</p>
+        <p><button class="btn btn-secondary" href="#" role="button" onclick="scrollBench()">View details &raquo;</button></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <h2>Deadlift</h2>
+        <p>Movement performed by picking up a weight off the floor until your back is fully locked out.</p>
+        <p><button class="btn btn-secondary" href="#" role="button" onclick="scrollDeadlift()">View details &raquo;</button></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette" id="squatDesc">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Squat<span class="text-muted"> - The hardest movement.</span></h2>
+        <p class="lead">The first exercise you'd do at a powerlifting meet is the squat. This is considered by many the hardest one, simply because if you fail the lift it
+          can cause injuries, due to the weight being across your back. Moreover, as it's the first movement performed in the competition, it can harm your mentality
+          for the rest of the meet. It is of vital importance that you squat weight you can handle, because otherwise you may be dissapointed and not as mentally prepared
+          for the other lifts.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" role="img"><img src="squat_black.jpg"></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette" id="benchDesc">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Bench<span class="text-muted"> - The upper body movement</span></h2>
+        <p class="lead">The bench is the second exercise in a meet, and it's also the only movement that has upper body muscles as the prime movers. The bench is very 
+          non-taxing, it's easy to fail on and doesn't use a lot of weight, so its not very mentally or physically exhausting. A lot of people have bench as their 
+          (relatively) strongest lift, so it allows for you to push beyond your limits as it is not dangerous to fail on.
+        </p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto" role="img"><img src="bench_black.jpg"></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette" id="deadliftDesc">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Deadlift<span class="text-muted"> - The king of all movements.</span></h2>
+        <p class="lead">The deadlift is the movement that allows you to move the most absolute weight. It is a full body movement, involving effectively every single muscle
+          but primarily your back and hamstrings. It's often called the "king of the gym", as it lets you work with extremely heavy weights - as much as 3 times your bodyweight.
+          It's also really easy to fail on, and the only exercise in a powerlifting meet which you can start yourself, without needing a command from a judge. This gives you
+          lots of time to mentally prepare yourself to move this massive amount of weight.
+        </p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" role="img"><img src="deadlift_black.png"></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+    <!--pop up-->
+    <div class="popUpFrame" id="popUpFrame">
+      <div class="popUpBox text-center" id="popUpBox" >
+        <div class="verticalCenter">
+          <p>Interested in starting powerlifting yourself?</p>
+            
+          <p>Learn more on <a href="https://www.britishpowerlifting.org/" target="_blank">the british powerlifting website</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!--comment section-->
+    <div class="container commentSection" id = "commentSection" >
+      <div class="text-center">
+        <label>COMMENT SECTION</label>
+        <form id="commentForm">
+          <input class="form-control my-1" placeholder="enter your username" id="unameInput"></input>
+          <textarea class="form-control" placeholder="enter your comment" id="textInput"></textarea>
+          <button class="btn btn-primary my-3" type="submit">submit</button>
+        </form>
+      </div>
+      <div class="my-4">
+        <ul class="list-group" id="commentList">
+          
+        </ul>
+      </div>
+    </div>
+
+</main>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="./carousel/bootstrap.bundle.min.js"></script>
+      <script src="./index.js"></script>
+</html>
