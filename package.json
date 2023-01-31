@@ -4,7 +4,8 @@
   "description": "progblack",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx eslint .",
+    "start": "node server.js"
   },
   "author": "ads",
   "license": "ISC",

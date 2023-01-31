@@ -7,6 +7,14 @@ app.use(bodyparser.urlencoded({extended:false}));
 app.use(express.static('client'));
 app.use(express.json());
 
+function verifyFiles()
+{
+    if(!fs.existsSync("comments.dat"))
+    {
+        fs.writeFileSync("comments.dat","");
+    }
+}
+
 app.post("/addComment", function(req, resp){
     let username = req.body["username"]
     let comment = req.body["comment"]
@@ -55,5 +63,6 @@ app.get("/getComment/:index",function(req,resp)
     resp.send({"content": data[req.params.index]})
 })
 
+verifyFiles()
 app.listen(8090);
 
